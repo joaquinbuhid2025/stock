@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class inventario {
-    private ArrayList<Producto> productos;
+    private ArrayList<producto> productos;
 
     public inventario() {
         productos = new ArrayList<>();
@@ -11,13 +11,13 @@ public class inventario {
     }
 
     public void mostrarProductos() {
-        for (Producto producto : productos) {
+        for (producto producto : productos) {
             System.out.println(producto);
         }
     }
     
     public void buscarProducto(String nombre) {
-        for (Producto producto : productos) {
+        for (producto producto : productos) {
             if (producto.getNombre() == nombre) {
                 System.out.println(producto);
                 return;
@@ -26,5 +26,5 @@ public class inventario {
         System.out.println("Producto no encontrado");
     }
 
-    public ArrayList<Producto> getProductos() { return productos; }
+    public ArrayList<producto> getProductos() { return productos; }
 }
