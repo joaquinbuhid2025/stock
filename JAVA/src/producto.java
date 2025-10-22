@@ -1,4 +1,5 @@
 public class producto {
+    private static int contador = -1;
     private int id;
     private String nombre;
     private double precio;
@@ -6,8 +7,8 @@ public class producto {
     private String categoria;
     private String URL_imagen;
 
-    public producto(int id, String nombre, double precio, int stock, String categoria, String URL_imagen) {
-        this.id = id;
+    public producto(String nombre, double precio, int stock, String categoria, String URL_imagen) {
+        this.id = contador++;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;

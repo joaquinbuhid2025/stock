@@ -5,9 +5,9 @@ public class inventario {
     public inventario() {
         productos = new ArrayList<>();
         
-        productos.add(new producto(1, "Producto 1", 10.0, 10, "Categoria 1", ""));
-        productos.add(new producto(2, "Producto 2", 20.0, 20, "Categoria 2", ""));
-        productos.add(new producto(3, "Producto 3", 30.0, 30, "Categoria 3", ""));
+        productos.add(new producto("Producto 1", 10.0, 10, "Categoria 1", ""));
+        productos.add(new producto("Producto 2", 20.0, 20, "Categoria 2", ""));
+        productos.add(new producto("Producto 3", 30.0, 30, "Categoria 3", ""));
     }
 
     public void mostrarProductos() {
@@ -24,6 +24,10 @@ public class inventario {
             }
         }
         System.out.println("Producto no encontrado");
+    }
+
+    public void agregar_producto(producto producto){
+        productos.add(producto);
     }
 
     public ArrayList<producto> getProductos() { return productos; }
